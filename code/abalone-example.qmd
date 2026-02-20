@@ -13,6 +13,7 @@ execute:
 # Set up
 
 ```{r libraries-and-data}
+#| message: false
 library(tidyverse) # general use
 library(janitor) # cleaning data frames
 library(here) # file/folder organization
@@ -30,11 +31,11 @@ Data from Hamilton et al. 2022. "Integrated multi-trophic aquaculture mitigates 
 
 ## a. Questions and hypotheses
 
-Question: How does pH predict abalone growth (measured in change in shell surface area per day, mm^-2^ d^-1^)?  
+Question: How does pH predict abalone growth (measured in change in shell surface area per day, mm^2^ d^-1^)?  
 
-H~0~: **[fill in here]**  
+H~0~: **pH does not predict abalone growth (change in shell surface area per day mm^2^ d^-1^).**  
 
-H~A~: **[fill in here]**
+H~A~: **pH predicts abalone growth (change in shell surface area per day, mm^2^ d^-1^). **
 
 ## b. Cleaning
 
