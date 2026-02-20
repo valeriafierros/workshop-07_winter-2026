@@ -108,11 +108,11 @@ summary(abalone_model)
 
 What is the slope estimate (with standard error?)  
 
-**insert your response here**  
+**2.98 +/- 0.76 (SE) With each increase in pH, the model predicts an increase of 2.98 +/- 0.76 (SE) inchange in shell surface area per day (mm^2^ d^-1^). **  
 
 What is the intercept estimate (with standard error?)  
 
-**insert your response here**
+**-18.5 +/- 6.16 (SE); The model predicts that abalone change in shell surface area per day is -18.5 +/- 6.16 (SE). (note to self: this is not necessarily biologically realistic but is something the model generates as an estimate.**
 
 ### Generating predictions
 
@@ -203,17 +203,17 @@ ggplot(data = abalone_clean,
 **Note:** both these functions are from `gtsummary`.
 
 ```{r abalone-table}
-#tbl_regression(abalone_model,
+tbl_regression(abalone_model,
                # make sure the y-intercept estimate is shown
-              # intercept = TRUE,
+               intercept = TRUE,
                # changing labels in "Characteristic" column
-             #  label = list(`(Intercept)` = "Intercept",
+               label = list(`(Intercept)` = "Intercept",
                            # mean_ph = "pH")) |> 
   # changing header text
- # modify_header(label = "**Variable**",
-              #  estimate = "**Estimate**") |> 
+  modify_header(label = "**Variable**",
+                estimate = "**Estimate**") |> 
   # turning table into a flextable (makes things easier to render to word or PDF)
- # as_flex_table()
+  as_flex_table()
 ```
 
 **END OF ABALONE EXAMPLE**
