@@ -1,7 +1,7 @@
 ---
 title: "Linear regression: Abalone growth and pH example"
-author: "your name here"
-date: "insert date here"
+author: "Valeria Fierros"
+date: "2026-02-20"
 format:
   html:
     toc: true # use this to display a table of contents
