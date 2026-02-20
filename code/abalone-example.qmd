@@ -56,11 +56,11 @@ Don't forget to look at your data! Use `View(abalone_clean)` in the _Console_.
 ## c. Exploratory data visualization
 
 ```{r abalone-scatterplot}
-# 
-ggplot(data = abalone_clean, # 
-       aes(x = mean_ph, # 
-           y = change_in_area)) 
-  # 
+# base layer: ggplot call
+ggplot(data = abalone_clean, # data set should be clean
+       aes(x = mean_ph, # predictor variable for x axis
+           y = change_in_area))+ #response variable for y axis
+  # first layer: points to represent change in area
   geom_point(size = 4,
              stroke = 1,
              fill = "firebrick4",
@@ -69,7 +69,7 @@ ggplot(data = abalone_clean, #
 
 Where does the missing value come from?  
 
-**insert response here**  
+**Tank B1B where the pH sensor failed.**  
 
 Don't forget to turn your warnings off either in the individual code chunk or in the YAML at the top of the file.
 
@@ -199,17 +199,17 @@ ggplot(data = abalone_clean,
 **Note:** both these functions are from `gtsummary`.
 
 ```{r abalone-table}
-tbl_regression(abalone_model,
+#tbl_regression(abalone_model,
                # make sure the y-intercept estimate is shown
-               intercept = TRUE,
+              # intercept = TRUE,
                # changing labels in "Characteristic" column
-               label = list(`(Intercept)` = "Intercept",
-                            mean_ph = "pH")) |> 
+             #  label = list(`(Intercept)` = "Intercept",
+                           # mean_ph = "pH")) |> 
   # changing header text
-  modify_header(label = "**Variable**",
-                estimate = "**Estimate**") |> 
+ # modify_header(label = "**Variable**",
+              #  estimate = "**Estimate**") |> 
   # turning table into a flextable (makes things easier to render to word or PDF)
-  as_flex_table()
+ # as_flex_table()
 ```
 
 **END OF ABALONE EXAMPLE**
